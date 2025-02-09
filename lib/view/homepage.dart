@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:news_applications/widget/ListItem.dart';
+import 'package:news_applications/widget/item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,6 +25,8 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      body: ListItem(),
     );
   }
 }
+
