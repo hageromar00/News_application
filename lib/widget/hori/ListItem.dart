@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_applications/model/generalNews.dart';
-import 'package:news_applications/widget/item.dart';
+import 'package:news_applications/widget/hori/item.dart';
 
 class ListItem extends StatelessWidget {
   ListItem({super.key});

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news_applications/widget/ListItem.dart';
-import 'package:news_applications/widget/item.dart';
+import 'package:news_applications/widget/future.dart';
+import 'package:news_applications/widget/hori/ListItem.dart';
+import 'package:news_applications/widget/verti/item.dart';
+import 'package:news_applications/widget/verti/listItem.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,7 +27,23 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: ListItem(),
+      body: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: ListItem(),
+          ),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
+          ),
+          FutureListNews(),
+        //  ListItemVerti()
+          // SliverToBoxAdapter(
+          //   child: ListItemVerti(),
+          // )
+        ],
+      ),
     );
   }
 }

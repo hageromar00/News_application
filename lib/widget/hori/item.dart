@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_applications/model/generalNews.dart';
+import 'package:news_applications/widget/future.dart';
+import 'package:news_applications/widget/hori/puch.dart';
 
 class Item extends StatelessWidget {
   Item({super.key, required this.model});
@@ -7,7 +9,11 @@ class Item extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return const PuchCategory();
+        }));
+      },
       child: Padding(
         padding: const EdgeInsets.only(left: 14),
         child: Container(
@@ -23,7 +29,8 @@ class Item extends StatelessWidget {
           child: Center(
             child: Text(
               model.text!,
-              style:const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
         ),
